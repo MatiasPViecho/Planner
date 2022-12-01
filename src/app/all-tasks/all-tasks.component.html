@@ -1,0 +1,24 @@
+<table class="table table-dark table-striped text-center">
+    <thead>
+        <tr>
+            <th>Status</th>
+            <th>Title</th>
+            <th>Level</th>
+            <th>Complete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let task of tasks$|async">
+            <td>
+                <img *ngIf="task.done == true" src="https://cdn-icons-png.flaticon.com/512/1828/1828644.png" alt="Tarea finalizada" width="25" height="25"/>
+                <img *ngIf="task.done == false" src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png" alt="Tarea finalizada" width="25" height="25"/>
+            </td>
+            <td>{{task.title}}</td>
+            <td>{{task.level}}</td>
+            <td>
+                <app-task-options [(task)]="task.done"></app-task-options> 
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p class="fs-5">Un {{completadasPorcentaje}}% han sido completadas</p>

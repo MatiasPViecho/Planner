@@ -1,0 +1,35 @@
+
+<div class="text-center">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Titulo</span>
+        </div>
+        <input type="text" class="form-control" [(ngModel)]="formTask" (keyup)="changeTitle($event)"/>
+      </div>
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Descripcion</span>
+        </div>
+        <textarea class="form-control" aria-label="With textarea" [(ngModel)]="mockTask.details"></textarea>
+      </div>
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Tipo</span>
+        </div>
+            <select class="form-select" name="type" [(ngModel)]="mockTask.type">
+                <option value="Facultad">Facultad</option>
+                <option value="Vida">Vida</option>
+            </select>
+    </div>
+
+    <div>
+        <div class="input-group">
+            <p for="customRange2" class="input-group-text">Dificultad: {{mockTask.level}}/5</p>
+            <input type="range" [(ngModel)]="mockTask.level" class=" mx-3 w-50 form-range slider" min="1" max="5" id="customRange2">
+        </div>
+    </div>
+      <button type="submit" class="btn btn-outline-warning" (click)="addTask(mockTask.details, mockTask.type, mockTask.level)">Enviar</button>
+</div>
+
