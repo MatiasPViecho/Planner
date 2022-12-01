@@ -8,7 +8,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let task of tasks$|async">
+        <tr *ngFor="let task of tasks$|async" class="container">
             <td>
                 <img *ngIf="task.done == true" src="https://cdn-icons-png.flaticon.com/512/1828/1828644.png" alt="Tarea finalizada" width="25" height="25"/>
                 <img *ngIf="task.done == false" src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png" alt="Tarea finalizada" width="25" height="25"/>

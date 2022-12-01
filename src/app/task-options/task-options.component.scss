@@ -1,5 +1,13 @@
-button{
-    display: inline-block;
-    width: 10vw;
-    max-width: 10vw;
-}
+
+
+
+@media only screen and (min-width: 800px) {
+    button{
+        display: inline-block;
+        width: 17vw;
+        max-width: 17vw;
+    }
+    button>span{
+        visibility: visible;
+    }
+  }

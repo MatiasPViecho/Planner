@@ -1,18 +1,22 @@
 
-<table class="table text-center table-dark">
+<table class="table text-center table-dark my-3">
     <tbody>
-        <tr class="bg-opacity-25" *ngIf="formTask != ''">
-            <td *ngIf="formTask != ''" class="d-flex">
-                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png" alt="Tarea finalizada" width="25" height="25" class="mx-3"/>
+        <tr class="bg-opacity-25" *ngIf="formTask != ''" class="container">
+            <td *ngIf="formTask != ''">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png" alt="Tarea finalizada" width="25" height="25" class="mx-3"/>                
+            </td>
+            <td>
                 <p class="px-5 mx-5">{{ formTask }} </p>
             </td>
             <td> 
             </td> 
 
         </tr>
-        <tr *ngFor="let task of tasks$|async">
-            <td *ngIf="task.done == false" class="d-flex"> 
+        <tr *ngFor="let task of tasks$|async" class="container">
+            <td *ngIf="task.done == false"> 
                 <img src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png" alt="Tarea finalizada" width="25" height="25" class="mx-3"/>
+            </td>
+            <td *ngIf="task.done == false"> 
                 <p class="px-5 mx-5">{{ task.title }} </p>
             </td>
             <td *ngIf="task.done == false">
