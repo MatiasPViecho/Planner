@@ -22,13 +22,16 @@ export class TasksDoneComponent {
     this.tasksService.getAll();  
   }
 
+  type !: string;
   details!: string;
 
-  getDetails(details: string): void{
+  getDetails(details: string, type: string): void{
     if(this.details == details)
       this.details = "";
-    else
+    else{
       this.details = details;
+      this.type = type;
+    }
     console.log(details);
   }
 }

@@ -15,7 +15,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#">{{ title }}</a>
         <a class="btn" [ngClass]="
-                        {'btn-success': currentRoute == '/list', 
+                        {'btn-success': (currentRoute == '/list' || currentRoute == '/'), 
                         'btn-outline-success': currentRoute != '/list'}" 
                         [routerLink]="['/list']">ALL TASKS
         </a>

@@ -11,18 +11,15 @@ import { TasksService } from '../tasks.service';
 export class AllTasksComponent implements OnInit{
   
   tasks$!: Observable<Task[]>;
-  completadasPorcentaje: number
   
   constructor (private tasksService: TasksService) {
     this.tasks$ = tasksService._tasksSubject.asObservable();
-    this.completadasPorcentaje = 0;
   }
 
   
 
   ngOnInit(): void {
       this.tasksService.getAll();
-      this.completadasPorcentaje = this.tasksService.getPorcentajeCompletadas();
   }
 
 }

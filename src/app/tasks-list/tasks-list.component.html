@@ -1,4 +1,6 @@
 
+<app-add-task  [(formTask)]="formTask"></app-add-task>
+
 <table class="table text-center table-dark my-3">
     <tbody>
         <tr class="bg-opacity-25" *ngIf="formTask != ''" class="container">
@@ -26,5 +28,3 @@
 
     </tbody>
 </table>
-
-<app-add-task  [(formTask)]="formTask"></app-add-task>

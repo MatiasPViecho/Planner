@@ -9,6 +9,7 @@ export class TaskDetailsComponent {
 
   @Input() text!: string;
 
-  @Output() textChange: EventEmitter<string> = new EventEmitter<string>();
+
+  @Input() type!: string;
 
 }

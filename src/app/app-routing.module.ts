@@ -8,7 +8,7 @@ import { TasksListComponent } from './tasks-list/tasks-list.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'tasks',
+    redirectTo: 'list',
     pathMatch: 'full',
   },
   {

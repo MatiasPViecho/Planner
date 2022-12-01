@@ -6,10 +6,10 @@
                         <img src="https://cdn-icons-png.flaticon.com/512/1828/1828644.png" alt="Tarea finalizada" width="25" height="25"/>
                       </td>
                       <td *ngIf="task.done == true" class="task-text">
-                        <p class="px-5 clickable border btn btn-outline-light" (click)="getDetails(task.details)">{{ task.title }} </p>               
+                        <p class="px-5 clickable border btn btn-outline-light" (click)="getDetails(task.details, task.type)">{{ task.title }} </p>               
                       </td>
             </tr>
         </tbody>
       </table>
-    <app-task-details [text]="details"></app-task-details>
+    <app-task-details [text]="details" [type]="type"></app-task-details>
 </div>
